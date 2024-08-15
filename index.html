@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Information Form</title>
+  <!-- Include hCaptcha script -->
+  <script src="https://hcaptcha.com/1/api.js" async defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Student Information Form</h1>
+    <!-- Success message div -->
+    <div id="success-message" style="display: none;">Form submitted successfully!</div>
+    <form action="#" method="post" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+          <option value="">Select Course</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Computer Applications">Computer Applications</option>
+          <option value="Engineering in AI">Engineering in AI</option>
+          <option value="Business">Business </option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
+      <div class="form-group">
+        <!-- Add hCaptcha widget -->
+        <div class="h-captcha" data-sitekey="e6d301d3-1e35-4f41-bed3-1af480a1db3c"></div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
